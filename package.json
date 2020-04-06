@@ -4,13 +4,14 @@
   "description": "## 开发文档",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "npx vuepress dev docs",
+    "build": "bash deploy.sh"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vuepress": "^1.4.0"
   }
 }
