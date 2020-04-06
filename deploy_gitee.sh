@@ -13,7 +13,7 @@ cp ./docs/.vuepress/config_gitee.js ./docs/.vuepress/config.js
 
 # 生成静态文件
 echo '执行命令：vuepress build .'
-npx vuepress build .
+npx vuepress build docs
 
 # 进入生成的文件夹
 echo "执行命令：cd ./.vuepress/dist\n"
