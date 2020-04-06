@@ -2,7 +2,7 @@ const path = require('path');
 const autoSidebar = require('./tool/autoSidebar.js')
 
 module.exports = {
-  title: 'VuePress试水_gitee', // TODO 改个标题~
+  title: 'VuePress试水', // TODO 改个标题~
   description: '这是一个VuePress试水项目的描述', // TODO 给个描述~
   port: 8888,
   head: [
