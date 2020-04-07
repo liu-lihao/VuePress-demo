@@ -93,6 +93,31 @@ const autoSidebar = () => {
   })
   return res;
 }
-const res = autoSidebar();
+const tempRes = autoSidebar();
+
+// 排序
+const res = {};
+Object.keys(tempRes).forEach(resKey => {
+  const item = tempRes[resKey];
+  let strArr = [];
+  let objArr = [];
+  item.forEach(item => {
+    if (typeof item === 'string') {
+      strArr.push(item)
+    } else {
+      item.children = item.children.sort(natsort());
+      objArr.push(item);
+    }
+  });
+  strArr = strArr.sort(natsort());
+  const sorter = natsort();
+  objArr = objArr.sort((a,b) => {
+    return sorter(a.title, b.title);
+  });
+  res[resKey] = [
+    ...strArr,
+    ...objArr
+  ]
+})
 
 module.exports = res;

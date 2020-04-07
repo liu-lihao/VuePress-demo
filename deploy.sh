@@ -1,12 +1,10 @@
-#!/usr/bin/env sh
-
-echo '开始执行部署github命令'
+echo '开始执行部署 GitHub 命令'
 # 生成静态文件
-echo '执行命令：vuepress build .'
+echo '执行命令：npx vuepress build docs'
 npx vuepress build docs
 
 # 进入生成的文件夹
-echo "执行命令：cd ./.vuepress/dist\n"
+echo "执行命令：cd ./docs/.vuepress/dist \n"
 cd ./docs/.vuepress/dist
 
 # 发布到自定义域名，没有域名直接略过
